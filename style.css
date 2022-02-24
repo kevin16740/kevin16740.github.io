@@ -1,0 +1,18 @@
+.szolgatashatter{
+    background-image: url('szolgatatas1hatter.jpg');
+    background-repeat: no-repeat; 
+}
+#szolgatatas1kep{
+    float: right;
+    margin-bottom: 20px;
+}
+#szolgatatas2kep{
+    float: right;
+    width: 200px;
+}
+body{
+    background-image: url('háttér.jpg');
+}
+.hatter2{
+    background-image: url('háttér2.jpg');
+}
