@@ -97,29 +97,69 @@
             </div>
         </div>
 
-    </div>
-    <div class="container">
+        <h1 class="h1 text-center fw-bold">Kisokos</h1>
+     <div class="row">
+        <div class="col-lg-5 col-md-12 m-auto my-5 border border-3 border-dark rounded-3 szolgatashatter">
         <fieldset>
-        <legend>Téglalap adatai</legend>
+        <legend class="h4 fw-bold text-center">Feszültség számítás</legend>
         <form>
             <div class="mb-3">
-              <label for="aoldal" class="form-label">a oldal</label>
-              <input type="number" class="form-control" id="aoldal" aria-describedby="aoldalHelp">
-              <div id="aoldalHelp" class="form-text">Adja meg a téglalap "a" oldalát!</div>
+              <label for="teljesitmeny" class="form-label"><h5 class="h5">teljesítmény</h5></label>
+              <input type="number" class="form-control" id="teljesitmeny" aria-describedby="teljesitmenyHelp">
+              <div id="teljesitmeny" class="form-text">Adja meg a berendezés által felvett teljesítményt!</div>
             </div>
             <div class="mb-3">
-                <label for="boldal" class="form-label">b oldal</label>
-                <input type="number" class="form-control" id="boldal" aria-describedby="boldalHelp">
-                <div id="boldalHelp" class="form-text">Adja meg a téglalap "b" oldalát!</div>
-            </div>  
+                <label for="aramerosseg" class="form-label"><h5 class="h5">áramerősség</h5></label>
+                <input type="number" class="form-control" id="aramerosseg" aria-describedby="aramerossegHelp">
+                <div id="aramerossegHelp" class="form-text">Adja meg a berendezés áram erősségét!</div>
             
-            <button type="button" onclick="szamol()" class="btn btn-primary">Számol</button>
+            
+            <button type="button" onclick="feszultsegeredmeny()" class="btn btn-primary">Számol</button>
           </form>
         </fieldset>
-        <div class="fw-bold mt-3" id="eredmeny"></div>
-    </div>
+        <div class="fw-bold mt-3" id="feszultsegeredmeny1"></div>
+     </div> 
+        <script>
+            function feszultsegeredmeny(){
+        const teljesitmeny = parseFloat(document.querySelector('#teljesitmeny').value);
+        const aramerosseg = parseFloat(document.querySelector('#aramerosseg').value);
+        const feszultsegeredmeny = teljesitmeny/aramerosseg;
+        feszultsegeredmeny1.innerHTML = "<p> A berendezés feszültsége: " + feszultsegeredmeny + "</p>";
+        }
+        </script>
+     </div>
+     <div class="col-lg-5 col-md-12 m-auto my-5 border border-3 border-dark rounded-3 szolgatashatter">
+        <fieldset>
+        <legend class="h4 fw-bold text-center">Áramerősség számítás</legend>
+        <form>
+            <div class="mb-3">
+              <label for="teljesitmeny1" class="form-label"> <h5 class="h5">teljesítmény</h5></label>
+              <input type="number" class="form-control" id="teljesitmeny1" aria-describedby="teljesitmeny1Help">
+              <div id="teljesitmeny1Help" class="form-text">Adja meg a berendezés által felvett teljesítményt!</div>
+            </div>
+            <div class="mb-3">
+                <label for="feszultseg1" class="form-label"><h5 class="h5">feszültség</h5></label>
+                <input type="number" class="form-control" id="feszultseg1" aria-describedby="feszultsegHelp">
+                <div id="feszultsegHelp" class="form-text">Adja meg a berendezés feszültségét!</div>
+            </div>  
+            
+            <button type="button" onclick="aramerossegeredmeny()" class="btn btn-primary">Számol</button>
+          </form>
+        </fieldset>
+        <div class="fw-bold mt-3" id="aramerossegeredmeny1"></div>
+     </div>
+     <script>
+        function aramerossegeredmeny(){
+    const teljesitmeny1 = parseFloat(document.querySelector('#teljesitmeny1').value);
+    const feszultseg1 = parseFloat(document.querySelector('#feszultseg1').value);
+    const aramerossegeredmeny = teljesitmeny1/feszultseg1;
+    aramerossegeredmeny1.innerHTML = "<p> A berendezés áramerőssége: " + aramerossegeredmeny + "</p>";
+    }
+    </script>
     
-    <script src="script.js"></script>
+
+    </div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
