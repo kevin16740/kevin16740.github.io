@@ -118,13 +118,13 @@
           </form>
         </fieldset>
         <div class="fw-bold mt-3" id="feszultsegeredmeny1"></div>
-     </div> 
+      
         <script>
             function feszultsegeredmeny(){
         const teljesitmeny = parseFloat(document.querySelector('#teljesitmeny').value);
         const aramerosseg = parseFloat(document.querySelector('#aramerosseg').value);
         const feszultsegeredmeny = teljesitmeny/aramerosseg;
-        feszultsegeredmeny1.innerHTML = "<p> A berendezés feszültsége: " + feszultsegeredmeny + "</p>";
+        feszultsegeredmeny1.innerHTML = "<p> A berendezés feszültsége: " + feszultsegeredmeny + " V(volt)" + "</p>";
         }
         </script>
      </div>
@@ -153,11 +153,11 @@
     const teljesitmeny1 = parseFloat(document.querySelector('#teljesitmeny1').value);
     const feszultseg1 = parseFloat(document.querySelector('#feszultseg1').value);
     const aramerossegeredmeny = teljesitmeny1/feszultseg1;
-    aramerossegeredmeny1.innerHTML = "<p> A berendezés áramerőssége: " + aramerossegeredmeny + "</p>";
+    aramerossegeredmeny1.innerHTML = "<p> A berendezés áramerőssége: " + aramerossegeredmeny + " A(amper)" + "</p>";
     }
     </script>
     
-
+    </div>
     </div>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
