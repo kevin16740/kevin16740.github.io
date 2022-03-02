@@ -16,3 +16,15 @@ body{
 .hatter2{
     background-image: url('háttér2.jpg');
 }
+.torvenyek{
+    min-height: 250px;
+}
+.kepletek{
+    min-height: 420px;
+}
+.kepletekimg{
+    width: 350px;
+}
+.emberek{
+    text-align: justify;
+}
