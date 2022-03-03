@@ -4,7 +4,8 @@
 }
 #szolgatatas1kep{
     float: right;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    min-width: 150px;
 }
 #szolgatatas2kep{
     float: right;
@@ -27,4 +28,7 @@ body{
 }
 .emberek{
     text-align: justify;
+}
+#felsorolas{
+    margin-top: 400px;
 }
